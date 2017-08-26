@@ -7,7 +7,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'nanotech/jellybeans.vim.git'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim.git'
+Plugin 'benmills/vimux.git'
 
 call vundle#end()
 filetype plugin indent on
@@ -26,6 +27,7 @@ syntax enable
 " show line numbers by default
 set number 
 
+set term=xterm-256color
 set background=dark
 colorscheme jellybeans
 
@@ -35,4 +37,15 @@ let g:ctrlp_cmd = 'CtrlP'
 
 " NERDTree
 map <silent> <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 
+" More natural splits
+set splitbelow
+set splitright
+
+" Don't automatically start new lines as comment
+set formatoptions-=r
+set formatoptions-=o
+
+" Prompt for a command to run
+map <Leader>vp :VimuxPromptCommand<CR>

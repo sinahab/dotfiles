@@ -10,3 +10,6 @@
 
 - NERDTree:
 Ctrl-n: toggle NERDTree open/close.
+
+- Fuzzy find:
+Ctrl-p
