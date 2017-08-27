@@ -9,6 +9,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'nanotech/jellybeans.vim.git'
 Plugin 'ctrlpvim/ctrlp.vim.git'
 Plugin 'benmills/vimux.git'
+Plugin 'christoomey/vim-tmux-navigator.git'
 
 call vundle#end()
 filetype plugin indent on
