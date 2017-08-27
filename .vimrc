@@ -44,8 +44,19 @@ set splitbelow
 set splitright
 
 " Don't automatically start new lines as comment
-set formatoptions-=r
 set formatoptions-=o
+set formatoptions-=r
+set formatoptions-=c
+
+" Whitespace
+set wrap
+set textwidth=79
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set noshiftround
 
 " Prompt for a command to run
 map <Leader>vp :VimuxPromptCommand<CR>
+map <Leader>vl :VimuxRunLastCommand<CR>

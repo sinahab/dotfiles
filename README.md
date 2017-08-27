@@ -13,3 +13,19 @@ Ctrl-n: toggle NERDTree open/close.
 
 - Fuzzy find:
 Ctrl-p
+
+# Tmux shortcuts
+
+- bind is: Ctrl-a
+- <Leader> is \
+
+- To go into copy mode (this is configured with vi mode):
+bind Enter
+
+- To copy after in copy mode:
+v
+
+- To paste after the fact:
+bind p
+
+
