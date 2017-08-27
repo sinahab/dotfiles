@@ -64,3 +64,6 @@ map <Leader>vl :VimuxRunLastCommand<CR>
 " Fix clipboard madness.
 " Check that vim version that has clipboard capability: vim --version | grep clipboard
 set clipboard=unnamed
+
+set backspace=indent,eol,start
+
