@@ -1,6 +1,6 @@
-set nocompatible 
+set nocompatible
 filetype off
- 
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -25,7 +25,7 @@ filetype plugin indent on
 syntax enable
 
 " show line numbers by default
-set number 
+set number
 
 set term=xterm-256color
 set background=dark
@@ -60,3 +60,7 @@ set noshiftround
 " Prompt for a command to run
 map <Leader>vp :VimuxPromptCommand<CR>
 map <Leader>vl :VimuxRunLastCommand<CR>
+
+" Fix clipboard madness.
+" Check that vim version that has clipboard capability: vim --version | grep clipboard
+set clipboard=unnamed
