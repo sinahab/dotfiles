@@ -16,6 +16,11 @@ cp .vimrc .bash_profile .tmux.conf ~
 
 4. Update your `~/.bash_profile` to source `dotfiles.sh` in this dir.
 
+5. If on Linux, source `~/.bash_profile` in your `~/.bashrc`:
+```
+echo 'source ~/.bash_profile >> ~/.bashrc'
+```
+
 5. Open a new terminal session. You're done.
 
 # Vim shortcuts
