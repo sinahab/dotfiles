@@ -18,7 +18,7 @@ export YELLOW='\[\e[1;33m\]'
 export WHITE='\[\e[1;37m\]'
 export NC='\[\e[0m\]' # no color
 
-export COOLGREEN='\033[01;32m\]'
+export COOLGREEN='\[\033[01;32m\]'
 export COOLBLUE='\[\033[01;34m\]'
 
 # osxdaily.com/2012/02/21/add-color-to-the-terminal-in-mac-os-x/
