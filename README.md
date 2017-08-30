@@ -1,27 +1,38 @@
 
 # Setup
 
-1. Install Vundle.
+1. Make sure vim supports clipboard:
+```
+vim --version | grep clipboard
+
+# on linux, might need to install vim-gnome
+sudo apt-get install vim-gnome
+
+# on mac, might need to update vim
+brew upgrade vim
+```
+
+2. Install Vundle.
 
 ```
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
-2. Copy `.vimrc`, `.bash_profile`, and `.tmux.conf` from this repo into your home dir.
+3. Copy `.vimrc`, `.bash_profile`, and `.tmux.conf` from this repo into your home dir.
 ```
 cp .vimrc .bash_profile .tmux.conf ~
 ```
 
-3. Open vim, and type :PluginInstall to install all vim plugins.
+4. Open vim, and type :PluginInstall to install all vim plugins.
 
-4. Update your `~/.bash_profile` to source `dotfiles.sh` in this dir.
+5. Update your `~/.bash_profile` to source `dotfiles.sh` in this dir.
 
-5. If on Linux, source `~/.bash_profile` in your `~/.bashrc`:
+6. If on Linux, source `~/.bash_profile` in your `~/.bashrc`:
 ```
 echo 'source ~/.bash_profile >> ~/.bashrc'
 ```
 
-5. Open a new terminal session. You're done.
+7. Open a new terminal session. You're done.
 
 # Vim shortcuts
 
