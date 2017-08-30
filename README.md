@@ -29,7 +29,7 @@ cp .vimrc .bash_profile .tmux.conf ~
 
 6. If on Linux, source `~/.bash_profile` in your `~/.bashrc`:
 ```
-echo 'source ~/.bash_profile >> ~/.bashrc'
+echo 'source ~/.bash_profile' >> ~/.bashrc
 ```
 
 7. Open a new terminal session. You're done.
