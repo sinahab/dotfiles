@@ -58,6 +58,9 @@ set softtabstop=2
 set expandtab
 set noshiftround
 
+set hlsearch
+set incsearch
+
 " Prompt for a command to run
 map <Leader>vp :VimuxPromptCommand<CR>
 map <Leader>vl :VimuxRunLastCommand<CR>
