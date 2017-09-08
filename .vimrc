@@ -50,8 +50,6 @@ set formatoptions-=r
 set formatoptions-=c
 
 " Whitespace
-set wrap
-set textwidth=79
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
