@@ -18,9 +18,9 @@ brew upgrade vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
-3. Copy `.vimrc`, `.bash_profile`, and `.tmux.conf` from this repo into your home dir.
+3. Copy `.vimrc`, `.bash_profile`, `.tmux.conf`, and `.gitignore` from this repo into your home dir.
 ```
-cp .vimrc .bash_profile .tmux.conf ~
+cp .vimrc .bash_profile .tmux.conf .gitignore ~
 ```
 
 4. Open vim, and type :PluginInstall to install all vim plugins.
@@ -32,7 +32,12 @@ cp .vimrc .bash_profile .tmux.conf ~
 echo 'source ~/.bash_profile' >> ~/.bashrc
 ```
 
-7. Open a new terminal session. You're done.
+7. If you have git installed, make it use the global `.gitignore` config.
+```
+git config --global core.excludesfile ~/.gitignore
+```
+
+8. Open a new terminal session. You're done.
 
 # Vim shortcuts
 
