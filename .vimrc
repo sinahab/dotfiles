@@ -10,6 +10,8 @@ Plugin 'nanotech/jellybeans.vim.git'
 Plugin 'ctrlpvim/ctrlp.vim.git'
 Plugin 'benmills/vimux.git'
 Plugin 'christoomey/vim-tmux-navigator.git'
+Plugin 'tomlion/vim-solidity'
+Plugin 'neovimhaskell/haskell-vim.git'
 
 call vundle#end()
 filetype plugin indent on
@@ -40,6 +42,9 @@ let g:ctrlp_cmd = 'CtrlP'
 map <silent> <C-n> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
+" haskell-vim
+let g:haskell_indent_disable = 1
+
 " More natural splits
 set splitbelow
 set splitright
@@ -55,6 +60,8 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set noshiftround
+
+set wildignore+=**/node_modules
 
 set hlsearch
 set incsearch
