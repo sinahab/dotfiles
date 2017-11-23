@@ -12,6 +12,7 @@ Plugin 'benmills/vimux.git'
 Plugin 'christoomey/vim-tmux-navigator.git'
 Plugin 'tomlion/vim-solidity'
 Plugin 'neovimhaskell/haskell-vim.git'
+Plugin 'leafgarland/typescript-vim.git'
 
 call vundle#end()
 filetype plugin indent on
@@ -55,9 +56,9 @@ set formatoptions-=r
 set formatoptions-=c
 
 " Whitespace
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 set noshiftround
 
