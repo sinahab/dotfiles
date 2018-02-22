@@ -31,23 +31,24 @@ grb() {
 }
 
 local_user() {
-  local pair=""
-  for person in $(command git config --local --get user.initials); do
-    pair+=$person
-  done
+  if [ -d .git ]; then
+    local pair=""
+    for person in $(command git config --local --get user.initials); do
+      pair+=$person
+    done
 
-  if [ -z "$pair" ]; then
-    :
-  else
-    echo -n " "$pair" "
+    if [ -z "$pair" ]; then
+      :
+    else
+      echo -n " "$pair" "
+    fi
   fi
 }
 
 current_git_branch() {
-  local git_dir="$(git rev-parse --git-dir 2>/dev/null)"
-  local git_branch
-  if [ -d "$git_dir" ]; then
-    git_branch=`git symbolic-ref HEAD 2>/dev/null || git describe --exact-match HEAD 2>/dev/null | cut -c1-7 "$git_dir/HEAD"`
+  if [ -d .git ]; then
+    local git_dir="$(git rev-parse --git-dir 3>/dev/null)"
+    local git_branch=`git symbolic-ref HEAD 2>/dev/null || git describe --exact-match HEAD 2>/dev/null | cut -c1-7 "$git_dir/HEAD"`
     git_branch=${git_branch#refs/heads/}
     echo -n $git_branch
   fi
