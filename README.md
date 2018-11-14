@@ -25,6 +25,19 @@ cp .vimrc .bash_profile .tmux.conf .gitignore ~
 
 4. Open vim, and type :PluginInstall to install all vim plugins.
 
+4.5. Setup the `YouCompleteMe` vim plugin.
+
+```
+# compile it
+cd ~/.vim/bundle/YouCompleteMe
+./install.py
+
+# needed for Javascript code completion
+npm install -g typescript
+```
+
+*Note*: you need to create a jsconfig.json file in the root folder of your Javascript projects (or a tsconfig.json for Typescript projects) for completion to work correctly.
+
 5. Update your `~/.bash_profile` to source `dotfiles.sh` in this dir.
 
 6. If on Linux, source `~/.bash_profile` in your `~/.bashrc`:

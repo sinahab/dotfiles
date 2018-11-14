@@ -11,8 +11,15 @@ Plugin 'ctrlpvim/ctrlp.vim.git'
 Plugin 'benmills/vimux.git'
 Plugin 'christoomey/vim-tmux-navigator.git'
 Plugin 'tomlion/vim-solidity'
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
 Plugin 'neovimhaskell/haskell-vim.git'
 Plugin 'leafgarland/typescript-vim.git'
+" Plugin 'vim-syntastic/syntastic'
+Plugin 'lervag/vimtex'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'elzr/vim-json'
 
 call vundle#end()
 filetype plugin indent on
@@ -56,9 +63,9 @@ set formatoptions-=r
 set formatoptions-=c
 
 " Whitespace
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set noshiftround
 
@@ -77,3 +84,19 @@ set clipboard=unnamed
 
 set backspace=indent,eol,start
 
+" elzr/vim-json 
+" turn off concealing
+let g:vim_json_syntax_conceal = 0
+
+" Valloric/YouCompleteMe
+" set jj as shortcut for GoTo definition of the word under cursor.
+nmap jj :YcmCompleter GoTo<CR>
+
+" Start autocompletion after 4 chars
+let g:ycm_min_num_of_chars_for_completion = 4
+let g:ycm_min_num_identifier_candidate_chars = 4
+let g:ycm_enable_diagnostic_highlighting = 0
+
+" Don't show YCM's preview window
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
