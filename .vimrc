@@ -7,7 +7,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'nanotech/jellybeans.vim.git'
-Plugin 'ctrlpvim/ctrlp.vim.git'
 Plugin 'benmills/vimux.git'
 Plugin 'christoomey/vim-tmux-navigator.git'
 Plugin 'tomlion/vim-solidity'
@@ -20,6 +19,9 @@ Plugin 'lervag/vimtex'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'elzr/vim-json'
+Plugin 'mattn/emmet-vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -45,6 +47,7 @@ colorscheme jellybeans
 " ctrlpvim/ctrlp.vim
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 " NERDTree
 map <silent> <C-n> :NERDTreeToggle<CR>
@@ -69,7 +72,7 @@ set softtabstop=2
 set expandtab
 set noshiftround
 
-set wildignore+=**/node_modules
+set wildignore+=*/node_modules/*
 
 set hlsearch
 set incsearch
@@ -100,3 +103,16 @@ let g:ycm_enable_diagnostic_highlighting = 0
 " Don't show YCM's preview window
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
+
+" emmet-vim
+let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+  \}
+
+" use ag (the silver searcher) for ack 
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif

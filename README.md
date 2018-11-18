@@ -1,7 +1,7 @@
 
 # Setup
 
-1. Make sure vim supports clipboard:
+* Make sure vim supports clipboard:
 ```
 vim --version | grep clipboard
 
@@ -12,20 +12,20 @@ sudo apt-get install vim-gnome
 brew upgrade vim
 ```
 
-2. Install Vundle.
+* Install Vundle.
 
 ```
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
-3. Copy `.vimrc`, `.bash_profile`, `.tmux.conf`, and `.gitignore` from this repo into your home dir.
+* Copy `.vimrc`, `.bash_profile`, `.tmux.conf`, and `.gitignore` from this repo into your home dir.
 ```
 cp .vimrc .bash_profile .tmux.conf .gitignore ~
 ```
 
-4. Open vim, and type :PluginInstall to install all vim plugins.
+* Open vim, and type :PluginInstall to install all vim plugins.
 
-4.5. Setup the `YouCompleteMe` vim plugin.
+* Setup the `YouCompleteMe` vim plugin.
 
 ```
 # compile it
@@ -38,19 +38,21 @@ npm install -g typescript
 
 *Note*: you need to create a jsconfig.json file in the root folder of your Javascript projects (or a tsconfig.json for Typescript projects) for completion to work correctly.
 
-5. Update your `~/.bash_profile` to source `dotfiles.sh` in this dir.
+* Install [`Ag`](https://github.com/ggreer/the_silver_searcher) (the silver searcher) as it's needed by the Ack vim plugin.
 
-6. If on Linux, source `~/.bash_profile` in your `~/.bashrc`:
+* Update your `~/.bash_profile` to source `dotfiles.sh` in this dir.
+
+* If on Linux, source `~/.bash_profile` in your `~/.bashrc`:
 ```
 echo 'source ~/.bash_profile' >> ~/.bashrc
 ```
 
-7. If you have git installed, make it use the global `.gitignore` config.
+* If you have git installed, make it use the global `.gitignore` config.
 ```
 git config --global core.excludesfile ~/.gitignore
 ```
 
-8. Open a new terminal session. You're done.
+* Open a new terminal session. You're done.
 
 # Vim shortcuts
 
