@@ -104,6 +104,9 @@ let g:ycm_enable_diagnostic_highlighting = 0
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
 
+" YCM: can use either Ctrl-Y or Enter to accept a suggestion.
+let g:ycm_key_list_stop_completion = ['<C-y>', '<CR>']
+
 " emmet-vim
 let g:user_emmet_leader_key='<Tab>'
 let g:user_emmet_settings = {
